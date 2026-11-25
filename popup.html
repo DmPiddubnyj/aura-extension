@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aura accessibility</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">AURA</div>
+      <p id="status" role="status">Checking this tab…</p>
+    </header>
+
+    <label for="profile">Visual profile</label>
+    <select id="profile">
+      <option value="protanopia">Protanopia · red appears darker</option>
+      <option value="deuteranopia">Deuteranopia · red-green color vision</option>
+      <option value="tritanopia">Tritanopia · blue-yellow color vision</option>
+      <option value="achromatopsia">Achromatopsia · grayscale vision</option>
+      <option value="lowVision">Low Vision · contrast</option>
+      <option value="readingComfort">Reading Comfort · warm tones</option>
+    </select>
+
+    <label class="check"><input id="clarify" type="checkbox"> Clarify wording</label>
+    <label for="language">Narration language</label>
+    <select id="language">
+      <option value="en-US">English</option>
+      <option value="sv-SE">Swedish</option>
+    </select>
+
+    <button id="ttsToggle" class="secondary tts-control" type="button" aria-pressed="true" disabled>Turn TTS off</button>
+    <p class="hint">TTS starts on for each new Aura activation. Shift+F9 pauses/resumes; Esc stops speech.</p>
+
+    <label for="voice">Voice</label>
+    <select id="voice"><option value="">Best local voice</option></select>
+    <button id="refreshVoices" class="secondary" type="button">Find available voices</button>
+
+    <label class="check remote"><input id="allowRemote" type="checkbox"> Allow online voices</label>
+    <p class="privacy">Online voices may send the sentence under the pointer off this device. This stays off unless you enable it.</p>
+
+    <button id="toggle" type="button" disabled>Start on this page</button>
+    <p class="hint">Moving the pointer stops the current sentence and starts at its new position.</p>
+    <p id="voiceStatus" class="voice-status" aria-live="polite"></p>
+  </main>
+  <script src="profiles.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
