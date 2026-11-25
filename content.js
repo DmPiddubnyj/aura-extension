@@ -170,7 +170,6 @@
       ["demonstrera", "visa"], ["indikera", "visa"], ["erfordra", "behöva"],
       ["identifiera", "hitta"], ["implementera", "genomföra"], ["utföra", "göra"],
       ["säkerställa", "se till"], ["möjliggöra", "göra möjligt"], ["försöka", "prova"],
-      ["ytterligare", "mer"]
     ]
   };
 
